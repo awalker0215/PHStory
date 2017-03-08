@@ -199,5 +199,121 @@ public class LoginController {
 		return model;
 
 	}
-
+	//=====================new===============================
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public ModelAndView contactPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("contact");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/origin", method = RequestMethod.GET)
+	public ModelAndView originPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("origin");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/team", method = RequestMethod.GET)
+	public ModelAndView teamPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("team");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/culture", method = RequestMethod.GET)
+	public ModelAndView culturePage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("culture");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public ModelAndView searchPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("search");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/animal", method = RequestMethod.GET)
+	public ModelAndView animalPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("animal");
+		
+		return model;
+	}
+	@RequestMapping(value = "/publish", method = RequestMethod.GET)
+	public ModelAndView publishPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("publish");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/build", method = RequestMethod.GET)
+	public ModelAndView buildPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("build");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/pculture", method = RequestMethod.GET)
+	public ModelAndView pculturePage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("pculture");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/pculture1", method = RequestMethod.GET)
+	public ModelAndView cditalPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("c01");
+		
+		return model;
+	}
+	@RequestMapping(value = "/build1", method = RequestMethod.GET)
+	public ModelAndView bditalPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("b01");
+		
+		return model;
+	}
+	@RequestMapping(value = "/animal1", method = RequestMethod.GET)
+	public ModelAndView aditalPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("a01");
+		
+		return model;
+	}
 }
