@@ -211,7 +211,7 @@ public class LoginController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/insertcontact", method = RequestMethod.GET)
+	@RequestMapping(value = "/insertcontact", method = RequestMethod.POST)
 	public ModelAndView incontactPage(HttpServletRequest request,
 			HttpServletResponse response) {
 		
@@ -282,6 +282,37 @@ public class LoginController {
 		ModelAndView model = new ModelAndView();
 		
 		model.setViewName("publish");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/insertpublish", method = RequestMethod.POST)
+	public ModelAndView inpublishPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		
+		ModelAndView model = new ModelAndView();
+		String title = (String) request.getParameter("title");
+		String author = (String) request.getParameter("author");
+		String postauthor = (String) request.getParameter("postauthor");
+		String units = (String) request.getParameter("Units");
+		String position = (String) request.getParameter("position");
+		String email = (String) request.getParameter("email");
+		String phone = (String) request.getParameter("phone");
+		String pclass = (String) request.getParameter("class");
+		String posttime = (String) request.getParameter("posttime");
+		String postloc = (String) request.getParameter("postloc");
+		String summary = (String) request.getParameter("summary");
+		String keyword = (String) request.getParameter("keyword");
+		String videolink = (String) request.getParameter("videolink");
+		String paper = (String) request.getParameter("paper");
+		String data = (String) request.getParameter("data");
+		
+		System.out.println(title+" "+author+" "+postauthor+" "+units+" "+position+" "+
+		email+" "+phone+" "+pclass+" "+posttime+" "+postloc+" "+summary+" "+keyword+" "+videolink+" "+paper+" "+data);
+		
+		loginService.insertpub(title, author, postauthor, phone, units, position, pclass, posttime, postloc, summary, keyword, paper, data);
+		
+		model.setViewName("../../index");
 		
 		return model;
 	}

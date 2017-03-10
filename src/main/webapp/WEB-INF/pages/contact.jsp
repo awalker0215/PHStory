@@ -62,7 +62,7 @@
       <div class="right_div">
         <h2>聯絡方式</h2>
       <form name='contactform' 
-					action="insertcontact" method="GET">
+					action="insertcontact" method="POST">
       <table width="100%" border="0" cellpadding="1">
   <tbody>
     <tr>

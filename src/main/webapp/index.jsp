@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link href="/resources/css/hiasp.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="/resources/pic/sicon.jpg"/>
-<title>INDEX</title>
+<title>澎湖故事島</title>
 </head>
 
 <body>

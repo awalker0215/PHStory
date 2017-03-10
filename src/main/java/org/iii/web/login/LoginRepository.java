@@ -92,4 +92,13 @@ public class LoginRepository {
 
 	}
 	
+	public int insertpub(String title, String author, String contact_name,String contact_phone,String unit,String job_title,String article_type,String publish_time,String publish,String Introduction,String keyword,String content,String reference_source)
+	{ 
+		String sql = "INSERT INTO post_platform(title,author,contact_name,contact_phone,unit,job_title,article_type,publish_time,publish,Introduction,keyword,content,reference_source) VALUE(?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+		int updateCount = jdbcTemplate.update(sql,
+				new Object[] { title,author, contact_name,contact_phone,unit,job_title,article_type,publish_time,publish,Introduction,keyword,content,reference_source });
+		return updateCount;
+
+	}
+	
 }
