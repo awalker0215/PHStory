@@ -59,7 +59,6 @@ function openBlock(evt, cityName) {
    			<li><a href="/publish">發表新文章</a></li>
     	</ul>
     </li>
-	  <li><a href="/search">搜尋</a></li>
   </ul>
   </div>
 </header>

@@ -37,7 +37,6 @@
    			<li><a href="/publish">發表新文章</a></li>
     	</ul>
     </li>
-	  <li><a href="/search">搜尋</a></li>
   </ul>
   </div>
 </header>
@@ -62,26 +61,29 @@
 	</div>
       <div class="right_div">
         <h2>聯絡方式</h2>
-      
+      <form name='contactform' 
+					action="insertcontact" method="GET">
       <table width="100%" border="0" cellpadding="1">
   <tbody>
     <tr>
       <td  align="right" valign="top" width="20%">姓名</td>
-      <td width="80%"> <input type="text" name="" value="" maxlength="" style="width: 100%"></td>
+      <td width="80%"> <input type="text" name="pername" value="" maxlength="" style="width: 100%"></td>
     </tr>
     <tr>
       <td align="right" valign="top" >信箱</td>
-      <td> <input type="email" name="" value="" style="width: 100%"></td>
+      <td> <input type="email" name="peremail"  style="width: 100%"></td>
     </tr>
     <tr>
       <td align="right" valign="top">留言</td>
-      <td><textarea name="" value="" maxlength="" style="width: 100%"></textarea></td>
+      <td><textarea name="pervalue" value="" maxlength="" style="width: 100%"></textarea></td>
     </tr>
     <tr>
-      <td colspan="2" align="right"><input type="button" name="" value="送出" class="contact_btn" style="width: 10%"></td>
-    </tr>
-  </tbody>
-</table>
+					<td colspan='2'><input id="btn_refirsted" class="btn_200_40 login-btn" type="submit" value="送出" /></td>
+				</tr>
+				  </tbody>
+			</table>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+	</form>
 </div>
     </div>
   

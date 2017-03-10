@@ -35,7 +35,6 @@
    			<li><a href="/publish">發表新文章</a></li>
     	</ul>
     </li>
-	  <li><a href="/search">搜尋</a></li>
   </ul>
   </div>
 </header>
@@ -53,7 +52,8 @@
 <footer>
 <hr>
 	<p>
-			本網站由中央研究院數位文化中心協助維護。<br><br>
+	<!-- footer還沒更新 -->
+			本網站由                                   協助維護。<br><br>
 			Copyright © 2014 科技部人文創新與社會實踐資料庫建置計畫 All Rights Reserved.<br><br>
 			「新作坊」採用創用CC(Creative Commons)姓名標示─非商業性─禁止改作 3.0 台灣授權條款，歡迎在遵守授權條款的情況下，自由使用與流通本平台的研究資訊與深度調查成果。
   </p>

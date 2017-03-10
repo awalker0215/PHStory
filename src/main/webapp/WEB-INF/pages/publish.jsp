@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <title>發表新文章</title>
 <link href="/resources/css/hiasp.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script></head>
+
 </head>
 
 <body>
@@ -38,7 +43,7 @@
   </ul>
   </div>
 </header>
-<main class="container">
+<main class="my_container">
 
   <div style="height: 700px">
       <div class="pubilsh_div">
@@ -106,9 +111,73 @@
 		<td><div><textarea name="" value="" maxlength="" style="width: 100%"></textarea></div></td>
     </tr>
     <tr>
-    	<td  align="right" valign="top">上傳全文檔案</td>
-    	<td><span title="未選擇檔案">瀏覽檔案</span>
-    		<input type="file" id="" name=""> </td>
+    	<td  align="right" valign="top">文章全文</td>
+    	<td>
+    	
+    	<div>
+       <ul class="edit_ul">
+        <li>
+		  <div class="btn-group">
+			<a class="btn btn-default wysihtml5-command-active" data-wysihtml5-command="bold" title="CTRL+B" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-bold"></span></a>
+			<a class="btn  btn-default" data-wysihtml5-command="italic" title="CTRL+I" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-italic"></span></a>
+			<a class="btn  btn-default" data-wysihtml5-command="underline" title="CTRL+U" tabindex="-1" href="javascript:;" unselectable="on">Underline</a>     
+		  </div>
+
+		  <div class="bootstrap-wysihtml5-insert-link-modal modal fade" data-wysihtml5-dialog="createLink">
+			<div class="modal-dialog ">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <a class="close" data-dismiss="modal">×</a>
+				  <h3>Insert link</h3>
+				</div>
+				<div class="modal-body">
+				  <div class="form-group">
+					<input value="http://" class="bootstrap-wysihtml5-insert-link-url form-control" data-wysihtml5-dialog-field="href">
+				  </div> 
+				  <div class="checkbox">
+					<label> 
+					  <input type="checkbox" class="bootstrap-wysihtml5-insert-link-target" checked="">Open link in new window
+					</label>
+				  </div>
+				</div>
+				<div class="modal-footer">
+				  <a class="btn btn-default" data-dismiss="modal" data-wysihtml5-dialog-action="cancel" href="#">Cancel</a>
+				  <a href="#" class="btn btn-primary" data-dismiss="modal" data-wysihtml5-dialog-action="save">Insert link</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+  		<a class="btn  btn-default" data-wysihtml5-command="createLink" title="Insert link" tabindex="-1" href="javascript:;" unselectable="on"> 
+     		 <span class="glyphicon glyphicon-film"></span> 
+  		</a>
+	
+		  <div class="bootstrap-wysihtml5-insert-image-modal modal fade" data-wysihtml5-dialog="insertImage" style="display: none;">
+			<div class="modal-dialog ">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <a class="close" data-dismiss="modal">×</a>
+				  <h3>Insert image</h3>
+				</div>
+				<div class="modal-body">
+				  <div class="form-group">
+					<input value="http://" class="bootstrap-wysihtml5-insert-image-url form-control" data-wysihtml5-dialog-field="src">
+				  </div> 
+				</div>
+				<div class="modal-footer">
+				  <a class="btn btn-default" data-dismiss="modal" data-wysihtml5-dialog-action="cancel" href="#">Cancel</a>
+				  <a class="btn btn-primary" data-dismiss="modal" data-wysihtml5-dialog-action="save" href="#">Insert image</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <a class="btn btn-default" data-wysihtml5-command="insertImage" title="Insert image" tabindex="-1" href="javascript:;" unselectable="on">
+			  <span class="glyphicon glyphicon-picture"></span>
+		  </a>
+		</li>
+        </ul>
+        </div >
+    	
+    	<div><textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea></div></td>
     </tr>
     <tr>
     <td  align="right" valign="top">參考資料來源</td>

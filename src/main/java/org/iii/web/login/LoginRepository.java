@@ -82,5 +82,14 @@ public class LoginRepository {
 		this.jdbcTemplate.update(sql,username);	
 
 	}
+	//====================================================
+	public int insertcon(String username, String email, String value)
+	{ 
+		String sql = "INSERT INTO guest_contact_method(name,email,comment) VALUE(?,?,?) ";
+		int updateCount = jdbcTemplate.update(sql,
+				new Object[] { username,email, value });
+		return updateCount;
+
+	}
 	
 }

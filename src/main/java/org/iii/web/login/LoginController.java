@@ -201,11 +201,28 @@ public class LoginController {
 	}
 	//=====================new===============================
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
-	public ModelAndView contactPage() {
+	public ModelAndView contactPage(HttpServletRequest request,
+			HttpServletResponse response) {
 		
 		ModelAndView model = new ModelAndView();
 		
 		model.setViewName("contact");
+		
+		return model;
+	}
+	
+	@RequestMapping(value = "/insertcontact", method = RequestMethod.GET)
+	public ModelAndView incontactPage(HttpServletRequest request,
+			HttpServletResponse response) {
+		
+		ModelAndView model = new ModelAndView();
+		String pername = (String) request.getParameter("pername");
+		String peremail = (String) request.getParameter("peremail");
+		String pervalue = (String) request.getParameter("pervalue");
+		System.out.println(peremail+pername+pervalue);
+		loginService.insertcon(pername, peremail, pervalue);
+		
+		model.setViewName("../../index");
 		
 		return model;
 	}
@@ -313,6 +330,24 @@ public class LoginController {
 		ModelAndView model = new ModelAndView();
 		
 		model.setViewName("a01");
+		
+		return model;
+	}
+	@RequestMapping(value = "/useredit", method = RequestMethod.GET)
+	public ModelAndView editPage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("u_Edit");
+		
+		return model;
+	}
+	@RequestMapping(value = "/userpage", method = RequestMethod.GET)
+	public ModelAndView upagePage() {
+		
+		ModelAndView model = new ModelAndView();
+		
+		model.setViewName("u_Page");
 		
 		return model;
 	}

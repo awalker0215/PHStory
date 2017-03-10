@@ -62,5 +62,12 @@ public class LoginService {
 		loginRepository.deleteUser(username);
 	
 	}
+	//================================================
+	public int insertcon(String username,String email , String value) {
+
+		int updateCount = loginRepository.insertcon(username, email, value);
+		return updateCount;
+	
+	}
 	
 }

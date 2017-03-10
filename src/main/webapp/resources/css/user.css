@@ -1,8 +1,8 @@
-@charset "utf-8";
 header{
 	width: 80%;
 	background-color: #fff;
 	padding-top: 5px;
+
 	padding-bottom: 0px;
 	clear: left;
 
@@ -17,7 +17,7 @@ header p{
 	padding-bottom: 00px;
 }
 .header_icon{
-	width: 80%;
+	width: 100%;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -29,11 +29,11 @@ header p{
 	padding-left: 10%;
 	padding-right: 10%;
 	align-content: center;
-	width: 80%;
+	width: 100%;
 }
 .header_ul{
-	background-color: #339966;
-	width: 80%;
+	background-color: #a6a6a6;
+	width: 100%;
 }
 
 /*下拉式列表*/
@@ -52,7 +52,7 @@ header p{
 		padding-bottom: 0;
 		padding-left: 12%;
 		
-		background:#009933;/*#004d26;*/
+		background:#a6a6a6;
 		height: auto;
 		text-align: center;
 		float: left;
@@ -74,7 +74,7 @@ header p{
         float: left; /* 只有第一層是靠左對齊*/
     }
      ul.drop-down-menu a {
-        background-color: #009933;/*#004d26;*/
+        background-color: #a6a6a6;
         color: #FFFFFF;
         display: block;
         padding: 0 0px;
@@ -83,11 +83,11 @@ header p{
 
     }
     ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
-        background-color:#00994d;
+        background-color:#808080;
         color: #fff;
     }
     ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
-        background-color:#006633;
+        background-color:#808080;
         color: #fff;
     }
 	ul.drop-down-menu ul {
@@ -131,7 +131,7 @@ html, body{
 	background-color: #fff;
 	width:80%;
 	height: auto;
-	margin-top: 50px;
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	border-bottom-width: 0px;
@@ -139,34 +139,22 @@ html, body{
 	padding-top: 0;
 	padding-right: 10%;
 	padding-bottom: 0px;
-}
-.my_container{
-	background-color: #fff;
-	width:20%;
-	height: auto;
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	border-bottom-width: 0px;
-	padding-left: 10%;
-	padding-top: 0;
-	padding-right: 10%;
-	padding-bottom: 0px;
+	overflow: visible;
 }
 .container h2 {
-	color: #8C0044;
+	color:#1a1a1a;
 	font-family: "Source Sans Pro";
 	text-align: left;
 }
 
 .container h3 {
-	color: #18191F;
+	color: #1a1a1a;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 .container h4 {
 	text-align: left;
-	color: #008028;
+	color: #1a1a1a;
 }
 .container p {
 	padding-left: -2em;
@@ -192,7 +180,7 @@ html, body{
 .member{
 	width: 150px;
 	height: 200px;
-	background-color: #e6ffee;/*#ccffdd;*/
+	background-color: #f2f2f2;
 	padding-top: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -221,7 +209,7 @@ html, body{
 	
 }
 .contact_btn {
-    background-color: #009933;
+    background-color: #999999;
     border: none;
     color: white;
     padding: 5px 30px;
@@ -253,29 +241,6 @@ ul.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-}
-
-/*顯示文章*/
-.intro {
-	background-color: #FFFFFF;
-}
-.column {
-	width: 50%;
-	text-align: center;
-	float: left;
-	
-}
-.column_right {
-	width: 50%;
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background:#ffffb3;
-	float: left;
-}
-.right_article {
-	width: 100%;
-	height: auto;
 }
 
 /* Float the list items side by side */
@@ -353,8 +318,32 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	height: 500PX;
 }
 
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
 footer {
-	width: 80%;
+	width: 100%;
 	background-color: #fff;
 	padding-top: 10px;
 	padding-left: 10%;
@@ -364,39 +353,23 @@ footer {
 }
 .noDisplay {
 	display: none;
-	height: 80%;
+	height: 100%;
 }
 
 
 @media (max-width: 320px) {
-	ul.drop-down-menu li.right, 
-    ul.drop-down-menu li {float: none;}
+	ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
 
 /* Small Tablets */
 @media (min-width: 321px)and (max-width: 767px) {
-	ul.drop-down-menu li.right, 
-    ul.drop-down-menu li {float: none;}
+	ul.topnav li.right, 
+    ul.topnav li {float: none;}
 }
 
 @media (min-width: 768px) and (max-width: 1096px) {
-.column {
-	width: 100%;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-.right_article {
-	width: 100%;
-	height: 100%;
-	padding-bottom: 25px;
-}
-.right_article {
-	height: auto;
-	padding-bottom: 27px;
-}
 }
 
 @media (max-width: 800px){
-
 }
